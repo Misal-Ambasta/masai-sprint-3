@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+            GitHub Jobs
+        </title>
+        <style>
+            .flex{
+                display: flex;
+
+            }
+            #box{
+                /* margin: 10px 400px; */
+                margin: 0 auto;
+                margin-bottom: 10px;
+                color: crimson;
+                padding-top: 16px;
+                /* border-style: solid; */
+                width: 44%;
+                
+                
+            }
+            #input_box{
+                text-align: center;
+            }
+            
+            body{
+                
+                background-color: rgb(35, 40, 46);
+                color: white;
+            }
+            #head{
+                text-align: center;
+                width: 40%;
+                margin: 0 auto;
+                padding-left: 6%;
+                
+            }
+            .job_icon{
+                width: 30%;
+            }
+            .left{
+                float: left;
+            }
+            .clear{
+                clear: left;
+            }
+            input,button,select{
+                padding: 10px 20px;
+                border-radius: 2px;
+                margin-left: 10px;
+                outline: none;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="head" >
+            <div  class="job_icon left"> <img class="job_icon" src="https://static.thenounproject.com/png/2958601-200.png" alt="job icon"></div>
+            <div class="left"><h1>GitHub Jobs</h1></div>
+            
+        </div>
+
+        <div id="box" class="clear">
+            <div id="input_box">
+                
+                <!-- <label for="name">Find a Job</label><br/><br/> -->
+                <!-- <label for="name"></label> -->
+                <h3>Find your dream Job!</h3>
+                
+                
+                <input type="text" name="name" id="description" placeholder="Enter Skills, Designation, etc"/>
+                <input type="text" name="name" id="location" placeholder="Location"/>
+
+                <select id="type" > 
+                    
+                    <option value="false">Part Time</option>
+                    <option value="true">Full Time</option>
+                    
+                </select>
+
+                <button id="search">Search</button>
+            </div>
+
+            <div id="result" class="flex">
+            
+            </div>
+        </div>
+
+        <script type="text/javascript" src="git_Hub_Jobs.js"></script>
+    </body>
+</html>
