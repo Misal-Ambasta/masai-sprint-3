@@ -4,12 +4,12 @@ var result = document.getElementById('result')
 
  
 
-function dateDiffInDays(a, b) 
+function dateDiffInDays(created_at, current_date) 
 {
   // Discard the time and time-zone information.
-  var postedDate = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+  var postedDate = Date.UTC(created_at.getFullYear(), created_at.getMonth(), created_at.getDate());
     //   console.log(postedDate+'posted')
-  var currentDate = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
+  var currentDate = Date.UTC(current_date.getFullYear(), current_date.getMonth(), current_date.getDate());
 
   return Math.floor((currentDate - postedDate) / (1000 * 60 * 60 * 24));
 }
@@ -30,9 +30,9 @@ function renderJobs(data)
 
     
     
-    var jobs = data[0]
+    // var jobs = data[0]
       
-    console.log(jobs)
+    // console.log(jobs)
 
     result.style.marginTop="25px"
 
@@ -46,7 +46,7 @@ function renderJobs(data)
     var current_date = new Date()
 
     
-    console.log(current_date)
+    // console.log(current_date)
     //loop through object
 
     for(var i=0; i<total_jobs; i++)
@@ -66,7 +66,7 @@ function renderJobs(data)
         created_at = new Date(created_at)
 
         var difference = dateDiffInDays(created_at, current_date);
-        console.log(typeof difference )
+        // console.log(typeof difference )
 
         var para_title = document.createElement('a')    // a tag for job title
         var div = document.createElement('div')     // data to be render in this box
